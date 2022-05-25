@@ -6,13 +6,13 @@ function leap() {
 		return leap();
 	}
 	var year = parseInt(input)
-	if((year % 4) != 0) {
-		alert("Common year");
-	}else if((year % 100) != 0) {
+	let leap = true;
+	if((year % 4) != 0 || (year % 400) != 0) {
+		leap = false;
+	}
+	if (leap) {
 		alert("Leap year");
-	}else if((year % 400) != 0) {
+	} else {
 		alert("Common year");
-	}else{
-		alert("Leap year");
 	}
 }
